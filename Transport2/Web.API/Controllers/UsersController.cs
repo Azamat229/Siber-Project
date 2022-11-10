@@ -34,9 +34,9 @@ namespace Web.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(string userName, CancellationToken cancellationToken)
+        public async Task<IActionResult> Create(string userName, string address, CancellationToken cancellationToken)
         {
-            var result = await _identityService.CreateUserAsync(userName);
+            var result = await _identityService.CreateUserAsync(userName, address);
             var user = await _userManager.Users.FirstOrDefaultAsync(x => x.Id == result.UserId, cancellationToken);
 
             return CreatedAtAction(nameof(Get), new { id = result.UserId }, user);

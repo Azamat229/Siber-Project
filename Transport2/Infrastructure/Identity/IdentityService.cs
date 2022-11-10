@@ -29,12 +29,13 @@ namespace Infrastructure.Identity
             return user.UserName;
         }
 
-        public async Task<(Result Result, string UserId)> CreateUserAsync(string userName)
+        public async Task<(Result Result, string UserId)> CreateUserAsync(string userName, string address)
         {
             var user = new ApplicationUser
             {
                 UserName = userName,
                 Email = userName,
+                Address = address
             };
 
             var result = await _userManager.CreateAsync(user);

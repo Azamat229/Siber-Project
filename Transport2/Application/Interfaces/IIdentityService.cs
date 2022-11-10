@@ -13,7 +13,7 @@ namespace Application.Interfaces
 
         Task<bool> IsInRoleAsync(string userId, string role);
 
-        Task<(Result Result, string UserId)> CreateUserAsync(string userName);
+        Task<(Result Result, string UserId)> CreateUserAsync(string userName, string address);
 
         Task<Result> DeleteUserAsync(string userId);
     }

@@ -12,5 +12,6 @@ namespace Contracts
         public int Id { get; set; }
         public ArrivalTimeDTO ArrivalTime { get; set; }
         public CampusDTO Campus { get; set; }
+        public string UserId { get; set; }
     }
 }

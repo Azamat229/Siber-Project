@@ -12,5 +12,6 @@ namespace Domain.Entities
         public int Id { get; set; }
         public ArrivalTime ArrivalTime { get; set; }
         public Campus Campus { get; set; }
+        public string UserId { get; set; }
     }
 }
